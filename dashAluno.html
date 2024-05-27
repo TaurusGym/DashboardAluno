@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="dashAluno.css">
+    <!-- GOOGLE FONTS POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- ICON -->
+    <link rel="shortcut icon" href="image/icon.ico" type="image/x-icon">
+    <!-- JAVASCRIPT -->
+    <script src="dashAluno.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <section id="menu">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo">
+        </div>
+
+        <div class="items">
+            <li class="active-btn">
+                <i class="btn fa-solid fa-house"></i>
+                <a href="#" class="btn">Home</a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-calendar"></i>
+                <a href="#">Calendário</a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-dumbbell"></i>
+                <a href="#">Treinos</a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="#">Sair</a>
+            </li>
+        </div>
+    </section>
+
+       <!-- header --> 
+        <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div>
+                        <i class="fas fa-bars" id="menu-btn"></i>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Pesquisar">
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <i class="fa fa-bell"></i>
+                    <img src="image/personal.jpg" alt="personal" loading="lazy">
+                </div>
+            </div>
+           
+            <!-- MAIN -->
+            <h3 class="title">
+               Ficha do Aluno
+            </h3>
+
+            <div class="values">
+                <div class="val-box">
+                    <i class="fa-solid fa-ruler-vertical"></i>
+                    <div>
+                        <h3>1.50</h3>
+                        <span>Altura</span>
+                    </div>
+                </div>
+
+                <div class="val-box">
+                    <i class="fa-solid fa-weight-scale"></i>
+                    <div>
+                        <h3>
+                            53.20 kg
+                        </h3>
+                        <span>Peso</span>
+                    </div>
+                </div>
+
+                <div class="val-box">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>
+                        <h3>24</h3>
+                        <span>IMC</span>
+                    </div>
+                </div>
+
+                <div class="val-box">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <div>
+                        <h3>6</h3>
+                        <span>Novos Treinos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- main-->
+           
+            <h4 class="title">Dicas do Personal</h4>
+
+            <div class="dica">
+                <div class="card">
+                    <p class="card-title">Faça Mobilidade</p>
+                    <p class="small-desc">
+                        Antes de iniciar seu treino, reserve alguns minutos para focar na mobilidade. Realize exercícios dinâmicos de aquecimento para aumentar a flexibilidade e preparar seu corpo para o exercício.
+                    </p>
+                    <div class="go-corner">
+                      <div class="go-arrow">→</div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <p class="card-title">Faça Cárdio</p>
+                    <p class="small-desc">
+                        Realizar cardio leve por 10-20 minutos após o treino de resistência pode aumentar o fluxo sanguíneo para os músculos, facilitando a recuperação e promovendo o crescimento muscular.
+                    </p>
+                    <div class="go-corner">
+                      <div class="go-arrow">→</div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <p class="card-title">Hidrate-se</p>
+                    <p class="small-desc">
+                        Beba pelo menos 1,5 litros de água durante o treino para manter seu corpo adequadamente hidratado
+                    </p>
+                    <div class="go-corner">
+                      <div class="go-arrow">→</div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <p class="card-title">Pré-Treino</p>
+                    <p class="small-desc">
+                        Consuma uma refeição balanceada cerca de 1-2 horas antes do treino, composta por carboidratos complexos, proteínas magras e gorduras saudáveis.
+                    </p>
+                    <div class="go-corner">
+                      <div class="go-arrow">→</div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        var menuButton = document.getElementById('menu-btn');
+        var menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+        </script>
+</body>
+</html>
